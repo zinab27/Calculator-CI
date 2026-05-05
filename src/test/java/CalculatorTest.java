@@ -35,9 +35,4 @@ public class CalculatorTest {
     public void testDivideByZero() {
         assertThrows(ArithmeticException.class, () -> calc.divide(10, 0));
     }
-
-    @Test(ArithmeticException.class)
-    public void testDivideByZeroWithAnnotation() {
-        calc.divide(10, 0);
-    }
 }
