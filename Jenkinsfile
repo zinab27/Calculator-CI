@@ -13,14 +13,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project with Maven...'
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
                 echo 'Running JUnit tests...'
-                sh 'mvn test'
+                bat 'mvn test'
             }
             post {
                 always {
